@@ -114,17 +114,10 @@ app.get("/playlist-mingflix", function(req, res){
 });
 
 app.get("/", function(req, res){
-    //console.log(res);
     res.render("home", {});
 });
 
-app.get("/test", function(req, res){
-    //console.log(res);
-    res.render("test", {});
-});
-
 app.get("/mingPR", function(req, res){
-    //console.log(res);
     res.render("mingPR", {});
 });
 
