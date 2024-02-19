@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Kingdom of mingtium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icons/nuniFavicon.png" type="image/x-icon"> 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+:root {
+	--ming-blue: #617da0;
+	--ming-pink: #f7cac9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin:0;
+    background-color: black !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+table {
+    margin-top: 2vw;
+    font-size: calc(4px + 1.5vw);
+}
+
+th {
+    vertical-align: top;
+}
+
+td {
+    vertical-align: top;
+    padding-bottom: 0.5vw !important;
+    padding-left: 1.4vw !important;
+}
+
+footer {
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+    background: black;
+    margin-top: -1px;
+}
+
+.bg-common {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 125%;
+    z-index: -999;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-video {
+    filter: blur(10px);
+    height: 100%;
+}
+
+.introduce-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents-area-common {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    margin-top: -1px;
+    padding-top: 2.5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.live-player-af {
+    padding: 1vw;
+    margin: 1vw;
+    border: 1px solid white;
+}
+
+.main-common{
+    width: 100%;
+}
+
+.font-bold{
+    font-family: helvetica neue,open sans,Arial,sans-serif;
+    font-size: calc(3px + 2vw); 
+    font-weight: 600;
+}
+
+.font-title{
+    font-family: 'Roboto', sans-serif; /* 폰트 패밀리로 Roboto 사용 */
+    font-size: 48px; /* 글자 크기 48픽셀 */
+    font-weight: 900; /* 폰트 두께 900으로 설정 */
+}
+
+.history-year {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(10px + 2.8vw);
+  text-align: center;
+  margin-top: 1vw;
+}
+
+.history-content {
+  text-align: center;
+  font-size: calc(3px + 1.0vw);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.history-top {
+  margin-top: 0;
+}
+
+.history-last {
+  text-align: right;
+  font-size: 2vw;
+  margin-top: 0;
+}
+
+.mingturnBlue{
+    color: var(--ming-blue);
+}
+
+.sectiontitle{
+    width: 100%;
+    text-align: left;
+    font-size: calc(35px + 5vw); 
+    font-weight: 600;
+}
+
+.fontColorWhite{
+    color: white;
+}
+
+.mingturnPink{
+    color: var(--ming-pink);
+}
+
+.cafe-redirect {
+    position: relative;
+    background: none;
+    width: 100vw;
+    height: 50vw;
+    margin-top: -50vw;
+}
+
+.bg-for-cafe-redirect-black{
+    background-color: black;
+    width: 100vw;
+    height: 50vw;
+    margin-top: -0.1vw;
+}
+
+.bg-for-cafe-redirect-img{
+    width: 100vw;
+    height: 50vw;
+    margin-top: -50vw;
+    background-image:url('images/mingWaiting.png'); 
+    background-size: cover; 
+    filter: blur(5px);
+}
+
+.button {
+  cursor: pointer;
+}
+
+.redirect-img{
+  width: 3vw;
+  margin-right: 0.5vw;
+}
+
+.btn-scroll {
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-bottom: 50px;
+  border-left: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb05 1.5s infinite;
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+/* carousel.zoom - 갤러리사진표시용 */
+.carousel.zoom{
+  overflow: hidden;
+  display: inline-block;
+}
+.carousel.zoom .carousel-inner{
+  position: relative;
+  overflow: visible;
+}
+.carousel.zoom .carousel-inner>.item{
+  position: absolute;
+  display: block;
+  width: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: all .4s ease-in-out;
+}
+.carousel.zoom .carousel-inner>.item.active{
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
+.carousel.zoom .carousel-inner>.item.active.right,
+.carousel.zoom .carousel-inner>.item.next {
+  -webkit-transform-origin: center right;
+  -moz-transform-origin: center right;
+  -ms-transform-origin: center right;
+  -o-transform-origin: center right;
+  transform-origin: center right;
+  opacity: 0.3;
+}
+.carousel.zoom .carousel-inner>.item.active.left,
+.carousel.zoom .carousel-inner>.item.prev {
+  -webkit-transform-origin: center left;
+  -moz-transform-origin: center left;
+  -ms-transform-origin: center left;
+  -o-transform-origin: center left;
+  transform-origin: center left;
+  opacity: 0.3;
+}
+
+
+/* carousel.zoom.landscape - 유튜브영상표시용 */
+.carousel.zoom.landscape .carousel-inner{
+  margin: 0 5vw;
+  width: auto;
+}
+.carousel.zoom.landscape .carousel-inner>.item.active.right,
+.carousel.zoom.landscape .carousel-inner>.item.next {
+  -webkit-transform: translate3d(5vw,0,0) scale(0.8);
+  -moz-transform: translate3d(5vw,0,0) scale(0.8);
+  -ms-transform : translate3d(5vw,0,0) scale(0.8);
+  -o-transform : translate3d(5vw,0,0) scale(0.8);
+  transform: translate3d(5vw,0,0) scale(0.8);
+}
+.carousel.zoom.landscape .carousel-inner>.item.active.left,
+.carousel.zoom.landscape .carousel-inner>.item.prev {
+  -webkit-transform: translate3d(-5vw,0,0) scale(0.8);
+  -moz-transform: translate3d(-5vw,0,0) scale(0.8);
+  -ms-transform : translate3d(-5vw,0,0) scale(0.8);
+  -o-transform : translate3d(-5vw,0,0) scale(0.8);
+  transform: translate3d(-5vw,0,0) scale(0.8);
+}
+.carousel.zoom.landscape .carousel-control{
+  width: 5vw;
+  background: transparent;
+}
+
+
+/* 메뉴 */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+.nav ul{
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.nav ul li{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+.nav ul li span{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+}
+.nav ul li span:hover{
+  text-decoration: none;
+  color: #F0CCCA;
+}
+.nav ul li span:after{
+  display: block;
+  position: absolute;
+  top: 50%;
+  content: '';
+  height: 1vw;
+  margin-top: -0.25vw;
+  width: 0;
+  left: 0;
+  background-color: #353746;
+  opacity: 0.8;
+  transition: width 250ms linear;
+}
+.nav ul li span:hover:after{
+  width: 100%;
+}
+
+
+/* 화살표 */
+.arrowbtn {
+  display: block;
+  position: relative;
+  width: 7vw;
+  height: 7vw;
+  background: #111;
+  border: 0.125vw solid white;
+  border-radius: 7vw;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.arrowbtn:hover {
+  background: white;
+  border-color: white;
+  color: #111;
+}
+
+.arrowbtn:after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 2vw;
+  height: 2vw;
+}
+
+.arrowbtn-next {
+  margin-left: 2vw;
+}
+
+.arrowbtn-before {
+  margin-right: 2vw;
+}
+
+.arrowbtn-next:after {
+  margin-left: 2.0vw;
+  margin-top: 2.2vw;
+  border-top: 0.2vw solid;
+  border-left: 0.2vw solid;
+  transform: rotateZ(135deg);
+}
+
+.arrowbtn-before:after {
+  margin-left: 2.5vw;
+  margin-top: 2.3vw;
+  border-bottom: 0.2vw solid;
+  border-right: 0.2vw solid;
+  transform: rotateZ(135deg);
+}
+
+/* TOOLTIP */
+[data-tooltip]{position:relative;}
+[data-tooltip]:before,
+[data-tooltip]:after{visibility:hidden;opacity:0;position:absolute;left:63%;transform:translateX(-50%);white-space:nowrap;transition:all .2s ease;font-size:11px;font-family:dotum;letter-spacing:-1px;}
+[data-tooltip]:before{content:attr(data-tooltip);height:25px;position:absolute;top:-20px;padding:5px 10px;border-radius:5px;color:#fff;background:#025272;box-shadow:0 3px 8px rgba(165, 165, 165, 0.5);}
+[data-tooltip]:after{content: '';border-left:15px solid transparent;top:2px;border-right:15px solid transparent;border-top:15px solid #025272;}
+[data-tooltip]:not([data-tooltip=""]):hover:before{visibility:visible;opacity:1;top:-30px}
+[data-tooltip]:not([data-tooltip=""]):hover:after{visibility:visible;opacity:1;top:-8px}
+
+
+/* 로딩화면 splash */
+#splash {
+  background: var(--ming-blue);
+  background-repeat: repeat-y;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: splash 3.5s ease-in;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%,0);
+}
+
+#loader:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  bottom: -170px;
+  width: 3px;
+  background: #fff;
+  background: linear-gradient(to bottom, var(--ming-pink) 0%, var(--ming-pink) 50%, rgba(255,255,255,0) 100%);
+  height: 200px;
+}
+
+#loader:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: 8px;
+  bottom: -190px;
+  width: 3px;
+  background: #000;
+  background: linear-gradient(to bottom, rgba(0,0,0,.2) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,0) 100%);
+  height: 200px;
+}
+
+#splash .anim {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  width: 100px;
+  transform: translate(-50%,100%);
+  animation: loader 4s linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.splash-text{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vw;
+    font-weight: 700;
+    font-size: 3vh;
+}
+
+.blinking{
+  -webkit-animation: blink 0.75s ease-in-out infinite alternate;
+  -moz-animation: blink 0.75s ease-in-out infinite alternate;
+  animation: blink 0.75s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes blink{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-moz-keyframes blink{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes blink{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes loader {
+  0% {
+    transform: translate(-50%,110%);
+  }
+  30% {
+    transform: translate(-50%,50%);
+  }
+  100% {
+    transform: translate(-50%,0%);
+  }
+}
+
+@keyframes splash {
+  0% {
+    transform: translate(0%,0%);
+  }
+  50% {
+    transform: translate(0%,0%);
+  }
+  100% {
+    transform: translate(0%,-100%);
+  }
+}
+
+
+/* media */
+@media (max-width: 768px) {
+  .youtube-redirect-area {
+    display: none !important;
+  }
+  #mingtube-area{
+    height: 61vw !important;
+  }
+  #profile-cont-mobile{
+    display: block !important;
+  }
+  .profile-cont{
+    width: 40% !important;
+    margin-right: 5vw;
+  }
+  .profile-pic{
+    width: 48% !important;
+  }
+  .profile-row-sec{
+    margin-top: 5vw;
+  }
+  .introduce-main{
+    height: 75vh !important;
+  }
+  #ming-eyecatch-area{
+    display: none !important;
+  }
+  #carousel-generic {
+    margin-top: 20px;
+  }
+  .redirect-img{
+    width: 5vw;
+  }
+}
+
+@media (max-width: 430px) {
+  #video-category {
+    display: none !important;
+  }
+  #mingtube-area{
+    height: 70vw !important;
+  }
+  #ming-eyecatch-area{
+    display: none !important;
+  }
+}
+
+
+</style>
+</head>
+<body>
+  <div id="splash">
+    <span class="fontColorWhite blinking splash-text">밍티엄 왕국으로 떠납니다...</span>
+    <div class="anim">
+      <div id="loader">
+        <svg version="1.1" width="60px" height="70px" viewBox="0 0 60 70">
+          <defs>
+            <filter id="f1" x="0" y="0">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            </filter>
+          </defs>
+          <g id="shadow" transform="scale(.9)">
+            <path fill="#000" fill-opacity="0.3" d="M0.677,20.977l4.355,1.631c0.281,0.104,0.579,0.162,0.88,0.16l9.76-0.004L30.46,41.58c0.27,0.34,0.679,0.545,1.112,0.541
+            h1.87c0.992,0,1.676-0.992,1.322-1.918l-6.643-17.439l6.914,0.002l6.038,6.037c0.265,0.266,0.624,0.412,0.999,0.418l1.013-0.004
+            c1.004-0.002,1.684-1.012,1.312-1.938l-2.911-7.277l2.912-7.278c0.372-0.928-0.313-1.941-1.313-1.938h1.017
+            c-0.375,0-0.732,0.15-0.996,0.414l-6.039,6.039h-6.915l6.646-17.443c0.354-0.926-0.33-1.916-1.321-1.914l-1.87-0.004
+            c-0.439,0.004-0.843,0.203-1.112,0.543L15.677,17.24l-9.765-0.002c-0.3,0.002-0.597,0.055-0.879,0.16L0.678,19.03
+            C-0.225,19.36-0.228,20.637,0.677,20.977z" transform="translate(64,30) rotate(90 0 0)" filter="url(#f1)" />
+          </g>
+          <g id="airplane">
+            <path fill="var(--ming-pink)" d="M0.677,20.977l4.355,1.631c0.281,0.104,0.579,0.162,0.88,0.16l9.76-0.004L30.46,41.58c0.27,0.34,0.679,0.545,1.112,0.541
+            h1.87c0.992,0,1.676-0.992,1.322-1.918l-6.643-17.439l6.914,0.002l6.038,6.037c0.265,0.266,0.624,0.412,0.999,0.418l1.013-0.004
+            c1.004-0.002,1.684-1.012,1.312-1.938l-2.911-7.277l2.912-7.278c0.372-0.928-0.313-1.941-1.313-1.938h1.017
+            c-0.375,0-0.732,0.15-0.996,0.414l-6.039,6.039h-6.915l6.646-17.443c0.354-0.926-0.33-1.916-1.321-1.914l-1.87-0.004
+            c-0.439,0.004-0.843,0.203-1.112,0.543L15.677,17.24l-9.765-0.002c-0.3,0.002-0.597,0.055-0.879,0.16L0.678,19.03
+            C-0.225,19.36-0.228,20.637,0.677,20.977z" transform="translate(44,0) rotate(90 0 0)" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="bg-common">
+    <video class="bg-video" src="images/bg_partyNight.mp4" loop muted preload="auto" playsinline autoplay=true></video>
+  </div>
+  <main class="main-common">
+    <section>
+      <div class="introduce-area introduce-main font-bold" style="font-weight: 500; height: 88vh;text-align: center;padding: 0 5vw; text-shadow: 0vw 0vw 5vw white;">
+        <span class="mingturnBlue sectiontitle font-title" style="text-align: center; line-height: 6vw;">
+          <span style="font-size: 3vw; color: white;">
+            <span style="letter-spacing: -0.17vw;">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
+            &nbsp;&nbsp;The Kingdom of&nbsp;&nbsp;
+            <span style="letter-spacing: -0.17vw;">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
+          </span>
+          <br>
+          <span style="font-size: 11vw;">M<span class="mingturnPink">I</span>NGT<span class="mingturnPink">I</span>UM</span>
+        </span>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <span class="fontColorWhite" style="font-size: 2vh; font-weight: 500;">밍티엄 왕국에 오신 여러분, 환영합니다!</span>
+      </div>
+      <div class="introduce-area">
+        <a href="#top-area"><div class="btn-scroll"></div></a>
+      </div>
+    </section>
+    <section id="top-area" class="contents-area-common">
+      <span class="font-bold mingturnBlue sectiontitle">LIVE</span>
+      <div style=" width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+        <iframe class="live-player-af" id="afreecatv_player_video" style="width:50vw; height:29.125vw; display: block; min-width:300px; min-height:169.75px;"
+        src="https://play.afreecatv.com/mingturn97/embed"
+        frameborder="0" allowfullscreen="true" allow="autoplay">
+        </iframe>
+        <img class="live-player-af" id="live_offline_img" src="images/mingLiveOffline.png" style="width:50vw; height:auto; display: none; min-width: 300px;">
+      </div>
+    </section>
+    <section id="mingtube-area" class="contents-area-common" style="height: 56.25vw;">
+      <span class="font-bold mingturnBlue sectiontitle">MINGTUBE</span>
+      <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+        <div style="display: flex; flex-direction: row; width: 100%; padding: 0 3vw; justify-content: center;">
+          <div id="video-category" class="fontColorWhite font-bold" style="display: flex; flex-direction: column; justify-content: space-around; width: 20%; height: 30vw;">
+            <nav class="nav"> 		
+              <ul class="pt-5">
+                <li><span id="btn-recent" class="button">최신 밍튜브</span></li>
+                <li><span id="btn-pasta" class="button">밍또니 파스타</span></li>
+                <li><span id="btn-cute" class="button">귀요미 공듀님</span></li>
+                <li><span id="btn-music" class="button">MUSIC</span></li>
+                <li><span id="btn-mingflix" class="button">밍플릭스</span></li>
+              </ul>
+            </nav>
+          </div>
+          <div id="video-area" style="width: 80%;">
+              <div id="youtube-playlist" style="display: block;">
+                <div class="container" style="width: 100%; height: 30vw;">
+                    <div class="row" style="display: flex; justify-content: center;">
+                        <div class="carousel zoom landscape slide" id="carousel-landscape" data-ride="carousel" data-interval=0>
+                            <div class="carousel-inner" role="listbox">
+                            </div>
+                        <a href="#carousel-landscape" class="left carousel-control" id="video-carousel-left" role="button" data-slide="prev"><span class="sr-only">Previous</span> </a> 
+                        <a href="#carousel-landscape" class="right carousel-control" id="video-carousel-right" role="button" data-slide="next"><span class="sr-only">Next</span> </a> 
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; margin-top: 15px;">
+                  <span class="arrowbtn arrowbtn-before before-video"></span>
+                  <span class="arrowbtn arrowbtn-next next-video"></span>
+                </div>
+              </div>
+          </div>
+          <div class="youtube-redirect-area" style="width: 10%; height: 30vw; display: flex; justify-content: center; align-items: center;">
+            <div data-tooltip="더 많은 영상을 보고싶으시다면 클릭!">
+              <a href="https://www.youtube.com/@mingturn" target="_blank" class="arrowbtn arrowbtn-next" id="youtube-redirect"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contents-area-common" style="padding-bottom: 5vw; background: white;">
+      <span class="font-bold mingturnBlue sectiontitle">PROFILE</span>
+      <div style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100%; align-items: flex-start; justify-content: center;">
+        <div class="profile-cont" style="display: flex; flex-direction: column; width: 31%; padding: 0 3vw;">
+          <span class="history-year history-top">2021</span>
+          <span class="history-content">밍턴 역사적 첫방송</span>
+          <span class="history-year">2022</span>
+          <span class="history-content">글로벌 엔터테인먼트 대기업 패러블 입사</span>
+          <span class="history-content">프로젝트커넥트 「party nigth」 공개</span>
+          <span class="history-year">2023</span>
+          <span class="history-content">Virtual Valorant League 우승</span>
+          <span class="history-content">첫 싱글앨범 「To.」 발매</span>
+          <span class="history-content">패러블 랜파티 우승 (롤토체스, 발로란트)</span>
+          <span class="history-content">첫 콘서트 「파스텔 탕후루」 개최</span>
+          <span class="history-content">뉴밍턴 공개</span>
+          <span class="history-year">2024</span>
+          <span class="history-content">아프리카 이적 발표</span>
+          <span class="history-year history-last">And More...</span>
+        </div>
+        <div class="profile-cont profile-pic" style="width: 33%; display: flex; border: 2px solid var(--ming-blue); padding: 0.7vw; margin-top: 10px;">
+          <img src="images/mingPortrait.jpeg" style="width: 100%;">
+        </div>
+        <div class="profile-cont profile-pic profile-row-sec" id="profile-cont-mobile" style="width: 33%; display: flex; border: 2px solid var(--ming-blue); padding: 0.7vw; display: none;">
+          <img src="images/mingPortrait2.jpeg" style="width: 100%;">
+        </div>
+        <div class="profile-cont profile-row-sec" style="width: 32%; height: 100%; padding-left: 3vw;">
+          <table>
+            <tr>
+              <th>이름</th>
+              <td>밍턴</td>
+            </tr>
+            <tr>
+              <th>생년월일</th>
+              <td>1997년 05월 22일<br>(20살 <span id="age">8</span>년차)</td>
+            </tr>
+            <tr>
+              <th>신체</th>
+              <td>158cm | O형</td>
+            </tr>
+            <tr>
+              <th>직업</th>
+              <td>밍티엄왕국 97번째<br>공주 겸 가수</td>
+            </tr>
+            <tr>
+              <th>MBTI</th>
+              <td>평상시 ESFP,<br>방송시 ISTP</td>
+            </tr>
+            <tr>
+              <th>팬덤명</th>
+              <td>누니</td>
+            </tr>
+            <tr>
+              <th>좋아하는 것</th>
+              <td>술과 사람</td>
+            </tr>
+            <tr>
+              <th>싫어하는 것</th>
+              <td>공포게임, 공포영화</td>
+            </tr>
+          </table>
+          <div style="margin-top: 0.5vw;">
+            <a href="https://www.instagram.com/ming_turn_/" target="_blank">
+              <img src="images/icons/instagram.png" class="redirect-img">
+            </a>
+            <a href="https://twitter.com/mingturn97" target="_blank">
+              <img src="images/icons/twitter.png" class="redirect-img">
+            </a>
+            <a href="https://cafe.naver.com/mingturn" target="_blank">
+              <img src="images/icons/cafe.png" class="redirect-img">
+            </a>
+            <a href="https://bj.afreecatv.com/mingturn97" target="_blank">
+              <img src="images/icons/afreecatv.png" class="redirect-img" style="margin-top: -0.5vw;">
+            </a>
+            <a href="https://www.youtube.com/@mingturn" target="_blank">
+              <img src="images/icons/youtube.png" class="redirect-img">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="ming-eyecatch-area" class="contents-area-common" style="padding: 0;">
+      <iframe src="/mingPR" frameborder="0" style="width: 100vw; height: 50vw;"></iframe>
+    </section>
+    <section class="contents-area-common">
+      <span class="font-bold mingturnBlue sectiontitle" style="line-height: 12vw;">MINGTIUM GALERY</span>
+      <!-- carousel갤러리를 구성할 영역 설정 -->
+      <div style="width: 100%;margin: 0 100px;margin-bottom: 50px;">
+        <div id="carousel-generic" class="carousel slide" >
+          <!-- carousel의 지시자 -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-generic" data-slide-to="0"></li>
+            <li data-target="#carousel-generic" data-slide-to="1" class="active"></li>
+            <li data-target="#carousel-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-generic" data-slide-to="4"></li>
+            <li data-target="#carousel-generic" data-slide-to="5"></li>
+            <li data-target="#carousel-generic" data-slide-to="6"></li>
+          </ol>
+          <!-- 실제 이미지 아이템 -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item">
+              <!-- 아미지 설정- -->
+              <img src="images/mingDefault1.png" style="width:100%">
+            </div>
+            <div class="item active">
+              <img src="images/mingPiano.png" style="width:100%">
+            </div>
+            <div class="item">
+              <img src="images/mingWedding.png" style="width:100%">
+            </div>
+            <div class="item">
+              <img src="images/mingFlorida.png" style="width:100%">
+            </div>
+            <div class="item">
+              <img src="images/mingNeonlight.png" style="width:100%">
+            </div>
+            <div class="item">
+              <img src="images/mingBeer.png" style="width:100%">
+            </div>
+            <div class="item">
+              <img src="images/mingConcert.png" style="width:100%">
+            </div>
+          </div>
+          <!-- 왼쪽 화살표 버튼 -->
+          <a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          </a>
+          <!-- 오른쪽 화살표 버튼 -->
+          <a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- <div style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    margin-top: -1px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #fff;">
+      <span class="mingturnBlue" style="
+      font-size: 5vw;">밍턴에 대해서 더 알고 싶으신가요?</span>
+      <div></div>
+      <span class="fontColorWhite" style="font-size: 5vw;">밍턴의 공식 팬카페에 가입해보세요!</span>
+      <span class="mingturnPink">공주님에 대한 더 많은 정보와 빠른 소식을 들으실 수 있습니다!</span>
+    </div> -->
+    <!-- <div class="bg-for-cafe-redirect-black"></div>
+    <div class="bg-for-cafe-redirect-img"></div>
+    <div class="contents-area-common cafe-redirect">
+      <span class="font-bold mingturnBlue sectiontitle" style="line-height: 13rem;">밍턴에 대해서 더 알고 싶으신가요?</span>
+      <span class="fontColorWhite">밍턴의 공식 팬카페에 가입해보세요!</span>
+      <span class="mingturnPink">공주님에 대한 더 많은 정보와 빠른 소식을 들으실 수 있습니다!</span>
+      <input type="button" value="누니모집중!">
+    </div> -->
+    <footer>
+      Copyright(C) 2024 All rights reserved.
+    </footer>
+
+  </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Bootstrap cdn 설정 -->	
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">	
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">	
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>	
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+  <script>
+  $(function(){
+
+    setTimeout(function() {
+      $("#splash").css("display", "none");
+    }, 3750);
+
+    /* 배경 동영상 위치조정 */
+    let bgMainHeight = $(".bg-common").css("height");
+    bgMainHeight = parseInt(bgMainHeight.replace("px", ""));
+
+    $(".bg-common").css("margin-top", bgMainHeight*-0.1+"px");
+
+    /* 유튜브 동영상 슬라이드 */
+    $(".carousel.zoom").carousel().on("slide.bs.carousel", function (data) {
+      var n = $(data.target).find(".item").length;
+      var active = data.relatedTarget;
+      if(active===undefined){
+        active = $(data.target).find(".item.active");
+      }else{
+        active = $(data.relatedTarget);
+      }
+      $(data.target).find(".item.next").removeClass("next");
+      var next = $(data.target).find(".item").eq(active.index()-n+1);
+      next.addClass("next");
+      $(data.target).find(".item.prev").removeClass("prev");
+      var prev = $(data.target).find(".item").eq(active.index()-1);
+      prev.addClass("prev");
+    }).trigger("slide.bs.carousel"); 
+
+    $(".before-video").on("click", function(){
+      $("#video-carousel-left").trigger("click");
+    });
+
+    $(".next-video").on("click", function(){
+      $("#video-carousel-right").trigger("click");
+    });
+
+    /* 갤러리 이미지 슬라이드 */
+    $('#carousel-generic').carousel({
+      interval: 3500,
+      pause: "hover",
+      wrap: true,
+      keyboard : true
+	  });
+
+    /* 나이계산 */
+    let now = new Date();
+    let birthday = new Date("1997-05-22");
+    let nowYear = now.getFullYear();
+    let birthYear = birthday.getFullYear();
+
+    $("#age").text(nowYear - birthYear - 20 + 1);
+
+    /* 유튜브 플레이리스트 초기화 */
+    loadPlaylist("/playlist-recent");
+
+    /* 방송중체크 */
+
+    //최근 영상 리스트 가져오기 url
+    var apiUrl = "https://apisabana.afreecatv.com/service/live/contents_recommend.php?nBroadNo=&szUserId=mingturn97&szPlatform=live_embeded";
+
+    let data;
+    // 최근동영상 리스트 가져오기
+    $.ajax({
+      type: "GET",
+      url: apiUrl,
+      dataType: "json",
+      success: function(data) {
+        console.log("최근동영상 리스트 가져오기 성공:", data.list[0].reg_date);
+        var recentVodRegDate = new Date(data.list[0].reg_date);
+
+        // 방송국 정보 가져오기 url
+        apiUrl = "https://st.afreecatv.com/api/get_station_status.php?szBjId=mingturn97";
+
+        // 방송국 정보 가져오기
+        $.ajax({
+          type: "GET",
+          url: apiUrl,
+          dataType: "jsonp", // cors회피를 위해, jsonp사용
+          success: function(data) {
+            console.log("방송국 정보 가져오기 성공:", data.DATA.broad_start);
+            var recentLiveStartDate = new Date(data.DATA.broad_start);
+
+            //최근방송vod는 직전 라이브 방송의 vod의 생성일이 data저장됨.
+            //방송국정보의 최근방송일은 마지막 라이브(라이브 중 포함)의 방송시작일이 표시가 됨.
+
+            //위에 따라 최근동영상리스트의 "최근방송vod생성일"이 방송국정보의 "최근방송일" 이전일 경우 현재 라이브 방송중
+            if (recentVodRegDate < recentLiveStartDate) {
+              $("#live_offline_img").hide();
+              $("#afreecatv_player_video").show();
+            //이후일 경우 방송종료이므로, 뱅종이미지 표시.
+            } else if (recentVodRegDate > recentLiveStartDate) {
+              $("#live_offline_img").show();
+              $("#afreecatv_player_video").hide();
+            } else {
+            //동일할 경우, 방송종료 후 vod가 생성된 직후이므로, 뱅송은 종료된것. 뱅종이미지 표시.
+              $("#live_offline_img").show();
+              $("#afreecatv_player_video").hide();
+            }
+          },
+          error: function(error) {
+            console.error("방송국 정보 실패:", error);
+          }
+        });
+      },
+      error: function(error) {
+        console.error("최근동영상 리스트 가져오기 실패:", error);
+      }
+    });
+  });
+
+  $("#btn-recent").on("click", function(){
+    loadPlaylist("/playlist-recent");
+    $("#youtube-redirect").attr("href", "https://www.youtube.com/@mingturn");
+  });
+
+  $("#btn-pasta").on("click", function(){
+    loadPlaylist("/playlist-pasta");
+    $("#youtube-redirect").attr("href", "https://www.youtube.com/@mingturn-pasta");
+  });
+
+  $("#btn-cute").on("click", function(){
+    loadPlaylist("/playlist-cute");
+    $("#youtube-redirect").attr("href", "https://youtube.com/playlist?list=PLoSpaEHwIuEZ-FYjDNGw9pfnT48yuQgmJ&si=UY0HTJ9L6q2Yxmvz");
+  });
+
+  $("#btn-music").on("click", function(){
+    loadPlaylist("/playlist-music");
+    $("#youtube-redirect").attr("href", "https://youtube.com/playlist?list=PLqF6kupuyiF-ZAnpudY3mz5_XDBnG99E5&si=bq8K-JVvt0yN6W49");
+  });
+
+  $("#btn-mingflix").on("click", function(){
+    loadPlaylist("/playlist-mingflix");
+    $("#youtube-redirect").attr("href", "https://youtube.com/playlist?list=PLqF6kupuyiF8mlrGWpUuHOFflfD1ddvSS&si=99zbRrOoXkFNgbcv");
+  });
+
+  function loadPlaylist(playlistUrl) {
+    $("#youtube-playlist").find(".carousel-inner").html("");
+    $.ajax({
+        url: playlistUrl,
+        method: "GET",
+        dataType: "json",
+        success: function (data) {
+            // 받아온 데이터를 이용하여 동적으로 HTML 생성
+            let videoCnt = 0;
+            data.videos.forEach(function (video) {
+                var htmlInner = "";
+                if (playlistUrl=="/playlist-recent") {
+                  if (videoCnt == 1) {
+                      htmlInner += `<div class="item active">`;
+                  } else if (videoCnt == 0) {
+                      htmlInner += `<div class="item next">`;
+                  } else if (videoCnt == 4) {
+                      htmlInner += `<div class="item prev">`;
+                  } else {
+                      htmlInner += `<div class="item">`;
+                  }
+                } else {
+                  if (videoCnt == 0) {
+                      htmlInner += `<div class="item active">`;
+                  } else if (videoCnt == 1) {
+                      htmlInner += `<div class="item next">`;
+                  } else if (videoCnt == 4) {
+                      htmlInner += `<div class="item prev">`;
+                  } else {
+                      htmlInner += `<div class="item">`;
+                  }
+                }
+                htmlInner += `<iframe style="width:50vw; height:29.125vw;" 
+                                src="https://www.youtube.com/embed/${video.snippet.resourceId.videoId}" 
+                                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                                clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+                                web-share" allowfullscreen></iframe>
+                            </div>`;
+                $("#youtube-playlist").find(".carousel-inner").append(htmlInner);
+
+                videoCnt++;
+            });
+        },
+        error: function (error) {
+            console.error('Error fetching playlist:', error);
+        }
+    });
+  }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.min.js"></script>
+</body>
+</html>
