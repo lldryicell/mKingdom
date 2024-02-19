@@ -117,8 +117,8 @@ app.get("/", function(req, res){
     res.render("home", {});
 });
 
-app.get("/mingPR", function(req, res){
-    res.render("mingPR", {});
+app.get("/eyecatch", function(req, res){
+    res.render("eyecatch", {});
 });
 
 const port = 3000;

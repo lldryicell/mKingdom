@@ -147,11 +147,11 @@ $(function(){
             data.videos.forEach(function (video) {
                 var htmlInner = "";
                 if (playlistUrl=="/playlist-recent") {
-                  if (videoCnt == 1) {
+                  if (videoCnt == 2) {
                       htmlInner += `<div class="item active">`;
-                  } else if (videoCnt == 0) {
+                  } else if (videoCnt == 3) {
                       htmlInner += `<div class="item next">`;
-                  } else if (videoCnt == 4) {
+                  } else if (videoCnt == 1) {
                       htmlInner += `<div class="item prev">`;
                   } else {
                       htmlInner += `<div class="item">`;
