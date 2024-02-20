@@ -5,8 +5,8 @@
 
 
 :root {
-	--ming-blue: #617da0;
-	--ming-pink: #f7cac9;
+	--ming-blue: #7D9BC2;
+  --ming-pink: #f7cac9;
 }
 
 html {
@@ -66,7 +66,7 @@ footer {
 }
 
 .bg-video {
-    filter: blur(10px);
+    filter: blur(25px);
     height: 100%;
 }
 
@@ -412,7 +412,7 @@ footer {
 
 /* 로딩화면 splash */
 #splash {
-  background: var(--ming-blue);
+  background: #5b7ba8;
   background-repeat: repeat-y;
   position: fixed;
   z-index: 999;
@@ -528,9 +528,6 @@ footer {
   .youtube-redirect-area {
     display: none !important;
   }
-  #mingtube-area{
-    height: 61vw !important;
-  }
   #profile-cont-mobile{
     display: block !important;
   }
@@ -563,7 +560,47 @@ footer {
     display: none !important;
   }
   #mingtube-area{
-    height: 70vw !important;
+    height: 330px !important;
+  }
+  #video-area{
+    width: 100% !important;
+  }
+  .container{
+    padding: 0 !important;
+    height: 173.73px !important;
+  }
+  .carousel.zoom.landscape .carousel-inner{
+    margin: 0;
+    width: auto;
+  }
+  .carousel.zoom .carousel-inner>.item.active>iframe{
+    width: 300px !important;
+    height: 168.75px !important;
+  }
+  .carousel.zoom.landscape .carousel-inner>.item.active.right,
+  .carousel.zoom.landscape .carousel-inner>.item.next {
+    -webkit-transform: translate3d(0,0,0) scale(0.8);
+    -moz-transform: translate3d(0,0,0) scale(0.8);
+    -ms-transform : translate3d(0,0,0) scale(0.8);
+    -o-transform : translate3d(0,0,0) scale(0.8);
+    transform: translate3d(0,0,0) scale(0.8);
+    display: none;
+  }
+  .carousel.zoom.landscape .carousel-inner>.item.active.left,
+  .carousel.zoom.landscape .carousel-inner>.item.prev {
+    -webkit-transform: translate3d(0,0,0) scale(0.8);
+    -moz-transform: translate3d(0,0,0) scale(0.8);
+    -ms-transform : translate3d(0,0,0) scale(0.8);
+    -o-transform : translate3d(0,0,0) scale(0.8);
+    transform: translate3d(0,0,0) scale(0.8);
+    display: none;
+  }
+  .carousel.zoom.landscape .carousel-control{
+    width: 5vw;
+    background: transparent;
+  }
+  .video-nav-btn{
+    margin-top: 60px;
   }
   #ming-eyecatch-area{
     display: none !important;
