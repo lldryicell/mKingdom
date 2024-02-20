@@ -553,6 +553,9 @@ footer {
   .redirect-img{
     width: 5vw;
   }
+  .gallary-area{
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 430px) {
