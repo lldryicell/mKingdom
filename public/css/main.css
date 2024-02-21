@@ -556,6 +556,9 @@ footer {
   .gallary-area{
     width: 100% !important;
   }
+  .gallary-title{
+    margin-top: 15px;
+  }
 }
 
 @media (max-width: 430px) {
