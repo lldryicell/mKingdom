@@ -22,6 +22,11 @@ a {
   text-decoration: none !important;
 }
 
+a:visited {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
 a:hover {
   text-decoration: none !important;
 }
@@ -51,6 +56,7 @@ footer {
     font-size: medium;
     background: black;
     margin-top: -1px;
+    text-align: center;
 }
 
 .bg-common {
@@ -165,22 +171,6 @@ footer {
     margin-top: -50vw;
 }
 
-.bg-for-cafe-redirect-black{
-    background-color: black;
-    width: 100vw;
-    height: 50vw;
-    margin-top: -0.1vw;
-}
-
-.bg-for-cafe-redirect-img{
-    width: 100vw;
-    height: 50vw;
-    margin-top: -50vw;
-    background-image:url('images/mingWaiting.png'); 
-    background-size: cover; 
-    filter: blur(5px);
-}
-
 .button {
   cursor: pointer;
 }
@@ -229,6 +219,51 @@ footer {
     opacity: 0;
   }
 }
+
+.contents-area-last{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  margin-top: -1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: #fff;
+  height: calc(200px + 10vw);
+}
+
+.wanna-be-join{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-size: calc(13px + 3.5vw);
+  margin-bottom: 20px;
+}
+
+
+
+/* .bg-for-cafe-redirect-black{
+    background-color: black;
+    width: 100%;
+    height: 50vw;
+    margin-top: -0.1vw;
+}
+
+.bg-for-cafe-redirect-img{
+    width: 100%;
+    height: 25vw;
+    margin-top: -50vw;
+    background-image:url('images/mingRoom.jpeg'); 
+    background-size: cover; 
+    filter: blur(10px);
+} */
+
+
+
 
 /* carousel.zoom - 갤러리사진표시용 */
 .carousel.zoom{
@@ -365,7 +400,7 @@ footer {
 .arrowbtn:hover {
   background: white;
   border-color: white;
-  color: #111;
+  color: #111 !important;
 }
 
 .arrowbtn:after {
@@ -408,6 +443,77 @@ footer {
 [data-tooltip]:after{content: '';border-left:15px solid transparent;top:2px;border-right:15px solid transparent;border-top:15px solid #025272;}
 [data-tooltip]:not([data-tooltip=""]):hover:before{visibility:visible;opacity:1;top:-30px}
 [data-tooltip]:not([data-tooltip=""]):hover:after{visibility:visible;opacity:1;top:-8px}
+
+
+
+
+
+/* 카페 리다이렉트 버튼 */
+
+.button_base {
+  width: 160px;
+  height: 65px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+.button_base:hover {
+  cursor: pointer;
+}
+
+.b09_electric {
+  color: #fff;
+  background-color: rgba(0,0,0,0);
+  border: #fff solid 1px;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999vw;
+  padding-top: 5px;
+}
+
+.b09_electric:hover {
+  color: #fff;
+  background-color: #7D9BC2;
+  border: #7D9BC2 solid 1px;
+  animation: b09_electric_blinkIn 0.1s step-end 0 2;
+  -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+  -moz-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+  transition: all 0.2s ease 0.2s;
+  -webkit-transition: all 0.2s ease 0.2s;
+  -moz-transition: all 0.2s ease 0.2s;
+}
+
+@-webkit-keyframes b09_electric_blinkIn {
+  from,
+  to {
+      background-color: #f8f8f8;
+      color: #080808;
+  }
+  50% {
+      background-color: #ffffff;
+      color: #000000;
+  }
+}
+
+@-moz-keyframes b09_electric_blinkIn {
+  from,
+  to {
+      background-color: #f8f8f8;
+      color: #080808;
+  }
+  50% {
+      background-color: #ffffff;
+      color: #000000;
+  }
+}
+
 
 
 /* 로딩화면 splash */
