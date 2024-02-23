@@ -32,12 +32,13 @@ a:hover {
 
 table {
     margin-top: 2vw;
-    font-size: calc(3px + 1.5vw);
+    font-size: calc(3px + 1.4vw);
 }
 
 th {
     vertical-align: top;
     font-family: 'NanumGothicBold' !important;
+    line-height: calc(8px + 1.8vw);
 }
 
 td {
@@ -45,6 +46,7 @@ td {
     padding-bottom: 0.5vw !important;
     padding-left: 1.5vw !important;
     font-family: 'NanumGothic' !important;
+    line-height: calc(7px + 1.8vw);
 }
 
 footer {
