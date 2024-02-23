@@ -1,8 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
 	--ming-blue: #7D9BC2;
@@ -33,17 +32,19 @@ a:hover {
 
 table {
     margin-top: 2vw;
-    font-size: calc(4px + 1.5vw);
+    font-size: calc(3px + 1.5vw);
 }
 
 th {
     vertical-align: top;
+    font-family: 'NanumGothicBold' !important;
 }
 
 td {
     vertical-align: top;
     padding-bottom: 0.5vw !important;
-    padding-left: 1.4vw !important;
+    padding-left: 1.5vw !important;
+    font-family: 'NanumGothic' !important;
 }
 
 footer {
@@ -57,6 +58,7 @@ footer {
     background: black;
     margin-top: -1px;
     text-align: center;
+    font-family: 'NanumGothicBold';
 }
 
 .bg-common {
@@ -107,7 +109,7 @@ footer {
 }
 
 .font-bold{
-    font-family: helvetica neue,open sans,Arial,sans-serif;
+    font-family: 'ROBOTO';
     font-size: calc(3px + 2vw); 
     font-weight: 600;
 }
@@ -129,8 +131,8 @@ footer {
 
 .history-content {
   text-align: center;
-  font-size: calc(3px + 1.0vw);
-  font-family: 'Montserrat', sans-serif;
+  font-size: calc(2.5px + 1.0vw);
+  font-family: 'NanumGothic';
   font-weight: 500;
 }
 
@@ -335,8 +337,6 @@ footer {
 
 
 /* 메뉴 */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 .nav ul{
   display: block;
