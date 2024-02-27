@@ -85,19 +85,19 @@ $(function(){
             //최근방송vod는 직전 라이브 방송의 vod의 생성일이 data저장됨.
             //방송국정보의 최근방송일은 마지막 라이브(라이브 중 포함)의 방송시작일이 표시가 됨.
 
-            // //위에 따라 최근동영상리스트의 "최근방송vod생성일"이 방송국정보의 "최근방송일" 이전일 경우 현재 라이브 방송중
-            // if (recentVodRegDate < recentLiveStartDate) {
-            //   $("#live_offline_img").html("");
-            //   $("#afreecatv_player_video").show();
-            // //이후일 경우 방송종료이므로, 뱅종이미지 표시.
-            // } else if (recentVodRegDate > recentLiveStartDate) {
-            //   $("#live_offline_img").show();
-            //   $("#afreecatv_player_video").html("");
-            // } else {
-            // //동일할 경우, 방송종료 후 vod가 생성된 직후이므로, 뱅송은 종료된것. 뱅종이미지 표시.
-            //   $("#live_offline_img").show();
-            //   $("#afreecatv_player_video").html("");
-            // }
+            //위에 따라 최근동영상리스트의 "최근방송vod생성일"이 방송국정보의 "최근방송일" 이전일 경우 현재 라이브 방송중
+            if (recentVodRegDate < recentLiveStartDate) {
+              $("#live_offline_img").html("");
+              $("#afreecatv_player_video").show();
+            //이후일 경우 방송종료이므로, 뱅종이미지 표시.
+            } else if (recentVodRegDate > recentLiveStartDate) {
+              $("#live_offline_img").show();
+              $("#afreecatv_player_video").html("");
+            } else {
+            //동일할 경우, 방송종료 후 vod가 생성된 직후이므로, 뱅송은 종료된것. 뱅종이미지 표시.
+              $("#live_offline_img").show();
+              $("#afreecatv_player_video").html("");
+            }
           },
           error: function(error) {
             console.error("방송국 정보 실패:", error);
