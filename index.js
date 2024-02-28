@@ -113,6 +113,58 @@ app.get("/playlist-mingflix", function(req, res){
         });
 });
 
+app.get("/chkLive", function(req, res){
+
+    const afUrl = 'https://play.afreecatv.com/mingturn97/embed';
+    
+    axios.get(afUrl)
+      .then(response => {
+
+        const html = response.data;
+            
+        // Cheerio를 사용하여 HTML 파싱
+        const $ = cheerio.load(html);
+    
+        // og:title 메타 태그 정보 가져오기
+        const ogTitle = $('meta[property="og:title"]').attr('content');
+    
+        // og:description 메타 태그 정보 가져오기
+        const ogDescription = $('meta[property="og:description"]').attr('content');
+    
+        // og:updated_time 메타 태그 정보 가져오기
+        const ogUpdatedTime = $('meta[property="og:updated_time"]').attr('content');
+    
+        // og:image 메타 태그 정보 가져오기
+        const ogImage = $('meta[property="og:image"]').attr('content');
+
+        //체크결과 반환
+        //아래 하나라도 해당하면 방종중이기 때문에, false반환
+        let isLive = true;
+
+        if (ogTitle.includes("방송중이지 않습니다") 
+                || ogDescription.includes("방송중이지 않습니다")
+                || ogUpdatedTime == ""
+                || ogImage.includes("default_logo") ) {
+            isLive = false;
+        }
+
+        res.json({ isLive }); // 데이터를 JSON 형식으로 전송
+
+        // //디버그용 JSON출력
+        // const debugResult = {
+        //     'og_title': ogTitle,
+        //     'og_description': ogDescription,
+        //     'og_updated_time': ogUpdatedTime,
+        //     'og_image': ogImage
+        // };
+        // console.log(debugResult);
+        // console.log(isLive);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+});
+
 app.get("/", function(req, res){
     res.render("home", {});
 });
