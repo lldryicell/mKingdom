@@ -169,6 +169,10 @@ app.get("/", function(req, res){
     res.render("home", {});
 });
 
+app.get('/healthyChk', (req, res) => {
+    res.status(200).send('OK');
+});
+
 app.get("/eyecatch", function(req, res){
     res.render("eyecatch", {});
 });
