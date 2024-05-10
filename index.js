@@ -22,13 +22,16 @@ app.get("/playlist-recent", async function(req, res){
         const uploadsPlaylistId = channelResponse.data.items[0].contentDetails.relatedPlaylists.uploads;
 
         // Uploads 플레이리스트에서 최신 5개 동영상 가져오기
-        const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=${uploadsPlaylistId}&key=${apiKey}&order=date`;
+        const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=30&playlistId=${uploadsPlaylistId}&key=${apiKey}&order=date`;
 
         const playlistResponse = await axios.get(playlistUrl);
         const filteredVideos = playlistResponse.data.items.filter(item => !item.snippet.description.includes("#short") && !item.snippet.title.includes("#short"));
         
         // 최대 5개까지만 선택
         const videos = filteredVideos.slice(0, 5);
+        
+        // 디버그용
+        // console.log(videos);
 
         res.json({ videos });
     } catch (error) {
