@@ -6,6 +6,7 @@
     <meta property="og:title" content="밍티엄왕국">
     <meta property="og:description" content="밍티엄왕국에 오신 것을 환영합니다!">
     <meta property="og:image" content="images/titleImg.jpeg">
+    <meta name="google" content="notranslate">
     <title>밍티엄 왕국</title>
     <link rel="apple-touch-icon" sizes="180x180" href="images/icons/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicons/favicon-32x32.png">
@@ -55,6 +56,13 @@
     <video class="bg-video" src="images/bg_partyNight.mp4" loop muted preload="auto" playsinline autoplay=true></video>
   </div>
   <main class="main-common">
+    <section style="position: fixed; right: 20px; top: 20px; z-index: 998;">
+      <div class="trans-button_base" id="trans-btn">
+        <span class="trans-kr-block" style="font-size: 20px; margin: 0 10px;">日本語</span>
+        <span class="trans-jp-block" style="font-size: 20px; margin: 0 10px;">한국어</span>
+        <img src="images/icons/Globe_icon_2.svg" alt="TRANSLATE SVG IMG" style="width: 25px;"/>
+      </div>
+    </section>
     <section>
       <div class="introduce-area introduce-main font-bold" style="font-weight: 500; height: 88vh;text-align: center;padding: 0 5vw; text-shadow: 0vw 0vw 0.1vw white;">
         <span class="mingturnBlue sectiontitle font-title" style="text-align: center; line-height: calc(20px + 5.2vw); color: #7D9BC2;">
@@ -68,7 +76,8 @@
         </span>
       </div>
       <div style="width: 100%; text-align: center;">
-        <span class="fontColorWhite introduce-description" style="font-size: 2vh;">밍티엄 왕국에 오신 여러분, 환영합니다!</span>
+        <span class="fontColorWhite introduce-description trans-kr-block" style="font-size: 2vh;">밍티엄 왕국에 오신 여러분, 환영합니다!</span>
+        <span class="fontColorWhite introduce-description trans-jp-block" style="font-size: 2vh;">ようこそ！ミンティアム王国へ！</span>
       </div>
       <div class="introduce-area">
         <a href="#top-area"><div class="btn-scroll"></div></a>
@@ -95,11 +104,36 @@
           <div id="video-category" class="fontColorWhite font-bold" style="display: flex; flex-direction: column; justify-content: space-around; width: 20%; height: 30vw;">
             <nav class="nav"> 		
               <ul class="pt-5">
-                <li><span id="btn-recent" class="button">최신 밍튜브</span></li>
-                <li><span id="btn-pasta" class="button">밍또니 파스타</span></li>
-                <li><span id="btn-cute" class="button">귀요미 공듀님</span></li>
-                <li><span id="btn-music" class="button">MUSIC</span></li>
-                <li><span id="btn-mingflix" class="button">밍플릭스</span></li>
+                <li>
+                  <div id="btn-recent" class="button">
+                    <span class="trans-kr-block">최신 밍튜브</span>
+                    <span class="trans-jp-block">新着MINGTUBE</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="btn-pasta" class="button">
+                    <span class="trans-kr-block">밍또니 파스타</span>
+                    <span class="trans-jp-block">ミントンCLIP</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="btn-cute" class="button">
+                    <span class="trans-kr-block">귀요미 공듀님</span>
+                    <span class="trans-jp-block">可愛いお姫様</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="btn-music" class="button">
+                    <span class="trans-kr-block">MUSIC</span>
+                    <span class="trans-jp-block">MUSIC</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="btn-mingflix" class="button">
+                    <span class="trans-kr-block">밍플릭스</span>
+                    <span class="trans-jp-block">MINGFLIX</span>
+                  </div>
+                </li>
               </ul>
             </nav>
           </div>
@@ -121,9 +155,14 @@
                 </div>
               </div>
           </div>
-          <div class="youtube-redirect-area" style="width: 10%; height: 30vw; display: flex; justify-content: center; align-items: center;">
+          <div class="trans-kr-flex youtube-redirect-area" style="width: 10%; height: 30vw; justify-content: center; align-items: center;">
             <div data-tooltip="더 많은 영상을 보고싶으시다면 클릭!">
-              <a href="https://www.youtube.com/@mingturn" target="_blank" class="arrowbtn arrowbtn-next" id="youtube-redirect"></a>
+              <a href="https://www.youtube.com/@mingturn" target="_blank" class="arrowbtn arrowbtn-next youtube-redirect"></a>
+            </div>
+          </div>
+          <div class="trans-jp-flex youtube-redirect-area" style="width: 10%; height: 30vw; justify-content: center; align-items: center;">
+            <div data-tooltip="もっと見たいのならコチラ!">
+              <a href="https://www.youtube.com/@mingturn" target="_blank" class="arrowbtn arrowbtn-next youtube-redirect"></a>
             </div>
           </div>
         </div>
@@ -132,7 +171,7 @@
     <section class="contents-area-common" style="padding-bottom: 5vw; background: white;">
       <span class="font-bold mingturnBlue sectiontitle">PROFILE</span>
       <div style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100%; align-items: flex-start; justify-content: center;">
-        <div class="profile-cont" style="display: flex; flex-direction: column; width: 32%; padding: 0 3vw;">
+        <div class="profile-cont profile-history trans-kr-flex">
           <span class="history-year history-top">2021</span>
           <span class="history-content">밍턴 역사적 첫방송</span>
           <span class="history-year">2022</span>
@@ -148,6 +187,22 @@
           <span class="history-content">아프리카 이적 발표</span>
           <span class="history-year history-last">And More...</span>
         </div>
+        <div class="profile-cont profile-history trans-jp-flex">
+          <span class="history-year history-top">2021</span>
+          <span class="history-content">配信スタート</span>
+          <span class="history-year">2022</span>
+          <span class="history-content">世界的エンタテインメント大手「パラブル」参加</span>
+          <span class="history-content">プロジェクトコネクト「party night」公開</span>
+          <span class="history-year">2023</span>
+          <span class="history-content">Virtual Valorant League 優勝</span>
+          <span class="history-content">初アルバム「To.」公開</span>
+          <span class="history-content">パラブルランパーティーイベント優勝(TFT, バロラント)</span>
+          <span class="history-content">初コンサート「パステル・タンフル」開催</span>
+          <span class="history-content">新アバタ公開</span>
+          <span class="history-year">2024</span>
+          <span class="history-content">SOOP移籍発表</span>
+          <span class="history-year history-last">And More...</span>
+        </div>
         <div class="profile-cont profile-pic" style="width: 33%; display: flex; border: 2px solid var(--ming-blue); padding: 0.7vw; margin-top: 10px;">
           <img src="images/mingPortrait1.jpeg" style="width: 100%;">
         </div>
@@ -155,14 +210,14 @@
           <img src="images/mingPortrait2.jpeg" style="width: 100%;">
         </div>
         <div class="profile-cont profile-row-sec" style="width: 35%; height: 100%; padding-left: 3vw;">
-          <table>
+          <table class="trans-kr-block">
             <tr>
               <th>이름</th>
               <td>밍턴</td>
             </tr>
             <tr>
               <th>생년월일</th>
-              <td>1997년 05월 22일<br>(20살 <span id="age">8</span>년차)</td>
+              <td>1997년 05월 22일<br>(20살 <span id="age">n</span>년차)</td>
             </tr>
             <tr>
               <th>신체</th>
@@ -187,6 +242,40 @@
             <tr>
               <th>싫어하는 것</th>
               <td>공포게임, 공포영화</td>
+            </tr>
+          </table>
+          <table class="trans-jp-block">
+            <tr>
+              <th>名前</th>
+              <td>MINGTURN(ミントン)</td>
+            </tr>
+            <tr>
+              <th>生年月日</th>
+              <td>1997年 05月 22日<br>(20歳 <span id="age">8</span>年目)</td>
+            </tr>
+            <tr>
+              <th>体</th>
+              <td>158cm | O型</td>
+            </tr>
+            <tr>
+              <th>職業</th>
+              <td>ミンティアム王国<br>97番目お姫様 兼 歌手</td>
+            </tr>
+            <tr>
+              <th>MBTI</th>
+              <td>通常時 ESFP,<br>配信時 ISTP</td>
+            </tr>
+            <tr>
+              <th>ファンクラブ</th>
+              <td>ヌニ（シマエナガ）</td>
+            </tr>
+            <tr>
+              <th>好きなもの</th>
+              <td>酒と人</td>
+            </tr>
+            <tr>
+              <th>嫌がるもの</th>
+              <td>ホラー系全般</td>
             </tr>
           </table>
           <div style="margin-top: 0.5vw;">
@@ -264,9 +353,11 @@
       </div>
     </section>
     <section class="contents-area-last">
-      <span class="fontColorWhite wanna-be-join">공주님과 함께하고 싶으시다면??</span>
+      <span class="fontColorWhite wanna-be-join trans-kr-block">공주님과 함께하고 싶으시다면??</span>
+      <span class="fontColorWhite wanna-be-join trans-jp-block">お姫様と一緒にしたいなら??</span>
       <a href="https://cafe.naver.com/mingturn" target="_blank" class="button_base b09_electric">
-        <span style="font-size: 20px; margin-left: 10px;">누니되기</span>
+        <span class="trans-kr-block" style="font-size: 20px; margin-left: 10px;">누니되기</span>
+        <span class="trans-jp-block" style="font-size: 20px; margin-left: 10px;">ヌニになる</span>
         <img src="images/icons/favicons/safari-pinned-tab.svg" alt="NUNI SVG IMG" style="width: 50px;"/>
       </a>
     </section>

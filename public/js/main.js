@@ -113,27 +113,27 @@ $(function(){
 
 $("#btn-recent").on("click", function(){
   loadPlaylist("/playlist-recent");
-  $("#youtube-redirect").attr("href", "https://www.youtube.com/@mingturn");
+  $(".youtube-redirect").attr("href", "https://www.youtube.com/@mingturn");
 });
 
 $("#btn-pasta").on("click", function(){
   loadPlaylist("/playlist-pasta");
-  $("#youtube-redirect").attr("href", "https://www.youtube.com/@mingturn-pasta");
+  $(".youtube-redirect").attr("href", "https://www.youtube.com/@mingturn-pasta");
 });
 
 $("#btn-cute").on("click", function(){
   loadPlaylist("/playlist-cute");
-  $("#youtube-redirect").attr("href", "https://youtube.com/playlist?list=PLoSpaEHwIuEZ-FYjDNGw9pfnT48yuQgmJ&si=UY0HTJ9L6q2Yxmvz");
+  $(".youtube-redirect").attr("href", "https://youtube.com/playlist?list=PLoSpaEHwIuEZ-FYjDNGw9pfnT48yuQgmJ&si=UY0HTJ9L6q2Yxmvz");
 });
 
 $("#btn-music").on("click", function(){
   loadPlaylist("/playlist-music");
-  $("#youtube-redirect").attr("href", "https://youtube.com/playlist?list=PLqF6kupuyiF-ZAnpudY3mz5_XDBnG99E5&si=bq8K-JVvt0yN6W49");
+  $(".youtube-redirect").attr("href", "https://youtube.com/playlist?list=PLqF6kupuyiF-ZAnpudY3mz5_XDBnG99E5&si=bq8K-JVvt0yN6W49");
 });
 
 $("#btn-mingflix").on("click", function(){
   loadPlaylist("/playlist-mingflix");
-  $("#youtube-redirect").attr("href", "https://youtube.com/playlist?list=PLqF6kupuyiF8mlrGWpUuHOFflfD1ddvSS&si=99zbRrOoXkFNgbcv");
+  $(".youtube-redirect").attr("href", "https://youtube.com/playlist?list=PLqF6kupuyiF8mlrGWpUuHOFflfD1ddvSS&si=99zbRrOoXkFNgbcv");
 });
 
 function loadPlaylist(playlistUrl) {
@@ -206,3 +206,42 @@ function chkLive() {
       }
   });
 }
+
+//번역관련
+$(function(){
+  let leng_mode_arr = ["kr", "jp"];
+  let leng_mod = leng_mode_arr[0];//초기 표시 : 한국어
+  
+  //초기화면 : 일본어 비표시
+  $(".trans-jp-block").hide();
+  $(".trans-jp-flex").hide();
+  
+  $("#trans-btn").on("click", function(){
+    if(leng_mod == "kr") {//현재 표시언어가 한국어모드이면 
+      
+      //일본어모드로 전환
+      leng_mod = leng_mode_arr[1];
+  
+      //일본어 표시
+      $(".trans-jp-block").show();
+      $(".trans-jp-flex").show();
+  
+      //한국어 비표시
+      $(".trans-kr-block").hide();
+      $(".trans-kr-flex").hide();
+  
+    } else if(leng_mod == "jp") {//현재 표시언어가 일본어모드이면 
+      
+      //한국어모드로 전환
+      leng_mod = leng_mode_arr[0];
+  
+      //일본어 비표시
+      $(".trans-jp-block").hide();
+      $(".trans-jp-flex").hide();
+  
+      //한국어 표시
+      $(".trans-kr-block").show();
+      $(".trans-kr-flex").show();
+    }
+  });
+});

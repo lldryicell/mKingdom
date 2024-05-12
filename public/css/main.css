@@ -147,6 +147,13 @@ footer {
     font-weight: 900; /* 폰트 두께 900으로 설정 */
 }
 
+.profile-history{
+  display: flex; 
+  flex-direction: column; 
+  width: 32%; 
+  padding: 0 3vw;
+}
+
 .history-year {
   font-family: "Parisienne", cursive;
   font-weight: 400;
@@ -382,7 +389,7 @@ footer {
   list-style: none;
 }
 
-.nav ul li span{
+.nav ul li div{
   text-transform: uppercase;
   display: inline-block;
   position: relative;
@@ -392,11 +399,11 @@ footer {
   font-weight: 900;
   font-style: normal;
 }
-.nav ul li span:hover{
+.nav ul li div:hover{
   text-decoration: none;
   color: #F0CCCA;
 }
-.nav ul li span:after{
+.nav ul li div:after{
   display: block;
   position: absolute;
   top: 50%;
@@ -409,7 +416,7 @@ footer {
   opacity: 0.8;
   transition: width 250ms linear;
 }
-.nav ul li span:hover:after{
+.nav ul li div:hover:after{
   width: 100%;
 }
 
@@ -749,4 +756,42 @@ footer {
   #ming-eyecatch-area{
     display: none !important;
   }
+}
+
+
+/* 번역기능 관련 */
+.trans-kr-block{
+  display: block;
+}
+.trans-kr-flex{
+  display: flex;
+}
+
+.trans-jp-block{
+  display: block;
+}
+.trans-jp-flex{
+  display: flex;
+}
+
+
+/* 번역 버튼 */
+
+.trans-button_base {
+  width: 130px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #7D9BC2;
+  border: #7D9BC2 solid 1px;
+  text-align: center;
+  border-radius: 999vw;
+  padding-top: 5px;
+  cursor: default;
+}
+
+.trans-button_base:hover {
+  cursor: pointer;
 }
