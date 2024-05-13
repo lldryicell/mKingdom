@@ -780,18 +780,39 @@ footer {
 .trans-button_base {
   width: 130px;
   height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  background-color: #7D9BC2;
-  border: #7D9BC2 solid 1px;
   text-align: center;
-  border-radius: 999vw;
-  padding-top: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-user-select: none;
   cursor: default;
 }
 
 .trans-button_base:hover {
   cursor: pointer;
+}
+
+.trans-electric {
+  color: #ffffff;
+  background-color: #7D9BC2;
+  border: #7D9BC2 solid 1px;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999vw;
+  padding-top: 5px;
+}
+
+.trans-electric:hover {
+  color: #fff;
+  background-color: #95b9e8;
+  border: #95b9e8 solid 1px;
+  animation: b09_electric_blinkIn 0.1s step-end 0 2;
+  -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+  -moz-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+  transition: all 0.2s ease 0.2s;
+  -webkit-transition: all 0.2s ease 0.2s;
+  -moz-transition: all 0.2s ease 0.2s;
 }
