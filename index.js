@@ -68,12 +68,17 @@ app.get("/playlist-pasta", async function(req, res){
 app.get("/playlist-cute", function(req, res){
 
     const playlistId = "PLoSpaEHwIuEZ-FYjDNGw9pfnT48yuQgmJ";
-    const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=5&playlistId=${playlistId}&key=${apiKey}&order=date`;
+    const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=${playlistId}&key=${apiKey}&order=date`;
 
     axios.get(apiUrl)
         .then(response => {
-            const data = response.data;
-            const videos = data.items;
+            const resVideos = response.data.items;
+
+            // 사용할 수 없는 동양상 필터링
+            const filteredVideos = resVideos.filter(item => !item.snippet.description.includes("This video is"));
+
+            // 최대 5개까지만 선택
+            const videos = filteredVideos.slice(0, 5);
             res.json({ videos }); // 데이터를 JSON 형식으로 전송
         })
         .catch(error => {
@@ -85,12 +90,17 @@ app.get("/playlist-cute", function(req, res){
 app.get("/playlist-music", function(req, res){
 
     const playlistId = "PLqF6kupuyiF-ZAnpudY3mz5_XDBnG99E5";
-    const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=5&playlistId=${playlistId}&key=${apiKey}&order=date`;
+    const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=${playlistId}&key=${apiKey}&order=date`;
 
     axios.get(apiUrl)
         .then(response => {
-            const data = response.data;
-            const videos = data.items;
+            const resVideos = response.data.items;
+
+            // 사용할 수 없는 동양상 필터링
+            const filteredVideos = resVideos.filter(item => !item.snippet.description.includes("This video is"));
+
+            // 최대 5개까지만 선택
+            const videos = filteredVideos.slice(0, 5);
             res.json({ videos }); // 데이터를 JSON 형식으로 전송
         })
         .catch(error => {
@@ -102,12 +112,17 @@ app.get("/playlist-music", function(req, res){
 app.get("/playlist-mingflix", function(req, res){
 
     const playlistId = "PLqF6kupuyiF8mlrGWpUuHOFflfD1ddvSS";
-    const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=5&playlistId=${playlistId}&key=${apiKey}&order=date`;
+    const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=${playlistId}&key=${apiKey}&order=date`;
 
     axios.get(apiUrl)
         .then(response => {
-            const data = response.data;
-            const videos = data.items;
+            const resVideos = response.data.items;
+
+            // 사용할 수 없는 동양상 필터링
+            const filteredVideos = resVideos.filter(item => !item.snippet.description.includes("This video is"));
+
+            // 최대 5개까지만 선택
+            const videos = filteredVideos.slice(0, 5);
             res.json({ videos }); // 데이터를 JSON 형식으로 전송
         })
         .catch(error => {
